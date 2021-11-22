@@ -9,7 +9,6 @@ import id.vincent.researchmvp.Model.MainActivityModel
 import id.vincent.researchmvp.Presenter.MainActivityPresenter
 
 class MainActivity : AppCompatActivity(), ContractInterface.View {
-    private var presenter : ContractInterface.Presenter? = null
     private lateinit var tvHasil : TextView
     var angka1 : EditText? = null
     var angka2 : EditText? = null
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity(), ContractInterface.View {
             val inputA1 = angka1?.text.toString().toInt()
             val inputA2 = angka2?.text.toString().toInt()
 
-            presenter?.hitung(inputA1, inputA2)
+            presenter.hitung(inputA1, inputA2)
         }
     }
 
